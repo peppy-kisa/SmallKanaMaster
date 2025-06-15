@@ -7,7 +7,8 @@ class GameStorage {
             stamps: [],
             characterLevel: 1,
             lastPlayDate: null,
-            rankBadge: '🌱'
+            rankBadge: '🌱',
+            masterTestCount: 0
         };
     }
 
@@ -115,6 +116,18 @@ class GameStorage {
         }
         
         return 0;
+    }
+
+    incrementMasterTestCount() {
+        const currentData = this.loadGameData();
+        const newCount = (currentData.masterTestCount || 0) + 1;
+        
+        this.saveGameData({
+            masterTestCount: newCount,
+            lastPlayDate: new Date().toISOString().split('T')[0]
+        });
+        
+        return newCount;
     }
 
     resetData() {

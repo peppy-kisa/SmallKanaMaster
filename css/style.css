@@ -672,6 +672,289 @@ body {
     }
 }
 
+/* マスターテスト関連スタイル */
+.button-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.master-test-button {
+    background: linear-gradient(45deg, #9C27B0, #E91E63);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.3);
+    transition: all 0.3s;
+}
+
+.master-test-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(156, 39, 176, 0.4);
+}
+
+.crown-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.crown-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.crown-item {
+    font-size: 2rem;
+    animation: crownFloat 2s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes crownFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* マスターテスト画面 */
+.master-test-header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #9C27B0, #E91E63);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.master-test-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.master-test-info {
+    margin-bottom: 20px;
+}
+
+.master-test-info p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.master-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.master-progress-bar {
+    width: 200px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.master-progress-fill {
+    height: 100%;
+    background: #FFD700;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+    width: 3.33%;
+}
+
+/* マスター完了画面 */
+#master-complete-screen {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF6B6B 100%);
+}
+
+.master-complete-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.master-celebration {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    animation: masterPop 1s ease;
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes masterPop {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.master-complete-title {
+    font-size: 2.5rem;
+    color: #E91E63;
+    margin-bottom: 25px;
+    font-weight: bold;
+    animation: titleGlow 2s ease infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { text-shadow: 0 0 10px rgba(233, 30, 99, 0.5); }
+    to { text-shadow: 0 0 20px rgba(233, 30, 99, 0.8); }
+}
+
+.master-complete-message {
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.master-text {
+    color: #9C27B0;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.master-crown {
+    font-size: 4rem;
+    margin: 20px 0;
+    animation: crownSpin 3s ease infinite;
+}
+
+@keyframes crownSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.master-complete-button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E8E);
+}
+
+/* 王冠の雨エフェクト */
+.crown-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.master-fireworks {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 3rem;
+    animation: fireworksBurst 2s ease infinite;
+    z-index: 5;
+}
+
+@keyframes fireworksBurst {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.3) rotate(180deg); opacity: 0.7; }
+}
+
+/* マスターテスト専用エフェクト */
+@keyframes fireworkSpark {
+    0% {
+        transform: rotate(var(--rotation, 0deg)) translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(var(--rotation, 0deg)) translateY(-100px) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes rainbowFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes crownShower {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes crownDrop {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .master-test-title {
+        font-size: 1.8rem;
+    }
+    
+    .master-complete-title {
+        font-size: 2rem;
+    }
+    
+    .master-crown {
+        font-size: 3rem;
+    }
+    
+    .master-complete-message {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-area {
+        gap: 10px;
+    }
+    
+    .master-test-button {
+        padding: 12px 30px;
+        font-size: 1.3rem;
+    }
+    
+    .master-complete-title {
+        font-size: 1.7rem;
+    }
+    
+    .master-celebration {
+        padding: 25px;
+        margin: 10px;
+    }
+}
+
 /* 高コントラストモード対応 */
 @media (prefers-contrast: high) {
     .option-button {

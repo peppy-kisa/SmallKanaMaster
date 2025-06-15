@@ -37,7 +37,16 @@
                     </div>
                 </div>
                 
-                <button id="start-button" class="start-button">スタート</button>
+                <div class="button-area">
+                    <button id="start-button" class="start-button">スタート</button>
+                    <button id="master-test-button" class="master-test-button">マスターテスト</button>
+                </div>
+                
+                <div class="crown-area">
+                    <div id="crown-display" class="crown-display">
+                        <!-- 王冠が動的に表示される -->
+                    </div>
+                </div>
             </main>
         </div>
 
@@ -113,6 +122,57 @@
                     <span id="new-rank-badge">🥉</span>
                 </div>
                 <button id="rankup-ok" class="action-button primary">やったー！</button>
+            </div>
+        </div>
+
+        <!-- マスターテスト画面 -->
+        <div id="master-test-screen" class="screen">
+            <header class="master-test-header">
+                <h2 class="master-test-title">👑 マスターテスト 👑</h2>
+                <div class="master-progress">
+                    <span id="master-current">1</span>
+                    <div class="master-progress-bar">
+                        <div id="master-progress-fill" class="master-progress-fill"></div>
+                    </div>
+                </div>
+            </header>
+            
+            <main class="game-main">
+                <div class="question-area">
+                    <div id="master-question-word" class="question-word">き◯うしつ</div>
+                    <div class="question-actions">
+                        <button id="master-hint-button" class="action-button">ヒント</button>
+                        <button id="master-audio-button" class="action-button">🔊</button>
+                    </div>
+                </div>
+                
+                <div id="master-hint-display" class="hint-display hidden">
+                    <p id="master-hint-text">べんきょうする ばしょ</p>
+                </div>
+                
+                <div class="options-area">
+                    <div id="master-options-container" class="options-container">
+                        <!-- 選択肢ボタンが動的に生成される -->
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- マスター完了画面 -->
+        <div id="master-complete-screen" class="screen">
+            <div class="master-complete-content">
+                <div class="master-celebration">
+                    <div class="crown-rain"></div>
+                    <div class="master-fireworks">🎆</div>
+                    <h1 class="master-complete-title">🏆 マスター にんていしょう 🏆</h1>
+                    <div class="master-complete-message">
+                        <p>おめでとう ございます！</p>
+                        <p>あなたは ようおん・そくおんの</p>
+                        <p><span class="master-text">だいマスター</span> です！</p>
+                    </div>
+                    <div class="master-crown">👑</div>
+                    <button id="master-complete-ok" class="action-button primary master-complete-button">ありがとう！</button>
+                </div>
             </div>
         </div>
     </div>

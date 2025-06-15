@@ -7,6 +7,8 @@ class KanaGame {
         this.totalQuestions = 5;
         this.currentLevel = 1;
         this.isAnswering = false;
+        this.isMasterTest = false;
+        this.masterTestQuestions = [];
     }
 
     async loadQuestions(level = 1) {
@@ -371,6 +373,296 @@ class KanaGame {
         this.updateTopScreen();
     }
 
+    async loadMasterTestQuestions() {
+        try {
+            console.log('Loading master test questions from all levels');
+            const allQuestions = [];
+            
+            for (let level = 1; level <= 3; level++) {
+                const response = await fetch(`data/questions-level${level}.json`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                const data = await response.json();
+                allQuestions.push(...data.questions);
+            }
+            
+            this.masterTestQuestions = this.shuffleArray(allQuestions).slice(0, 30);
+            console.log(`Loaded ${this.masterTestQuestions.length} master test questions`);
+            return true;
+        } catch (error) {
+            console.error('Failed to load master test questions:', error);
+            return false;
+        }
+    }
+
+    startMasterTest() {
+        this.isMasterTest = true;
+        this.questions = [...this.masterTestQuestions];
+        this.currentQuestionIndex = 0;
+        this.correctAnswers = 0;
+        this.gameResults = [];
+        this.isAnswering = false;
+        this.totalQuestions = 30;
+        this.displayMasterTestQuestion();
+    }
+
+    displayMasterTestQuestion() {
+        if (this.currentQuestionIndex >= this.questions.length) {
+            this.completeMasterTest();
+            return;
+        }
+
+        const question = this.questions[this.currentQuestionIndex];
+        const questionWordElement = document.getElementById('master-question-word');
+        const currentQuestionElement = document.getElementById('master-current');
+        const progressFill = document.getElementById('master-progress-fill');
+        const hintDisplay = document.getElementById('master-hint-display');
+        const optionsContainer = document.getElementById('master-options-container');
+
+        questionWordElement.textContent = question.display;
+        currentQuestionElement.textContent = this.currentQuestionIndex + 1;
+        
+        const progressPercent = ((this.currentQuestionIndex + 1) / 30) * 100;
+        progressFill.style.width = `${progressPercent}%`;
+
+        hintDisplay.classList.add('hidden');
+
+        this.displayMasterTestOptions(question);
+        this.isAnswering = true;
+    }
+
+    displayMasterTestOptions(question) {
+        const optionsContainer = document.getElementById('master-options-container');
+        optionsContainer.innerHTML = '';
+
+        const shuffledOptions = this.shuffleArray(question.options);
+
+        shuffledOptions.forEach(option => {
+            const button = document.createElement('button');
+            button.className = 'option-button';
+            button.textContent = option;
+            button.addEventListener('click', () => this.selectMasterTestAnswer(option, question.correctAnswer));
+            optionsContainer.appendChild(button);
+        });
+    }
+
+    selectMasterTestAnswer(selectedAnswer, correctAnswer) {
+        if (!this.isAnswering) return;
+        
+        this.isAnswering = false;
+        const question = this.questions[this.currentQuestionIndex];
+        const isCorrect = selectedAnswer === correctAnswer;
+        
+        const optionButtons = document.querySelectorAll('#master-options-container .option-button');
+        optionButtons.forEach(button => {
+            button.classList.add('disabled');
+            if (button.textContent === correctAnswer) {
+                button.classList.add('correct');
+            } else if (button.textContent === selectedAnswer && !isCorrect) {
+                button.classList.add('incorrect');
+            }
+        });
+
+        if (isCorrect) {
+            this.correctAnswers++;
+            this.playSound('correct');
+            this.showCorrectEffect();
+        } else {
+            this.playSound('incorrect');
+            this.showIncorrectEffect();
+            this.failMasterTest();
+            return;
+        }
+
+        this.gameResults.push({
+            question: question,
+            selectedAnswer: selectedAnswer,
+            isCorrect: isCorrect
+        });
+
+        setTimeout(() => {
+            this.currentQuestionIndex++;
+            this.displayMasterTestQuestion();
+        }, 2500);
+    }
+
+    failMasterTest() {
+        const question = this.questions[this.currentQuestionIndex];
+        this.createFloatingText('マスターテスト しっぱい...', '#F44336', '😢');
+        
+        setTimeout(() => {
+            this.createFloatingText('さいしょから やりなおし！', '#FF9800', '💪');
+            setTimeout(() => {
+                this.startMasterTest();
+            }, 2000);
+        }, 2000);
+    }
+
+    completeMasterTest() {
+        console.log('Master test completed successfully!');
+        gameStorage.incrementMasterTestCount();
+        this.createMasterTestCelebration();
+        
+        setTimeout(() => {
+            this.switchScreen('master-complete-screen');
+            this.createCrownRain();
+        }, 1000);
+    }
+
+    createMasterTestCelebration() {
+        // 画面全体に超派手なエフェクト
+        this.createFloatingText('マスター 達成！！', '#FFD700', '🏆');
+        
+        // 連続花火エフェクト
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+                this.createFirework();
+            }, i * 300);
+        }
+        
+        // 虹色紙吹雪
+        this.createRainbowConfetti();
+        
+        // 王冠シャワー
+        setTimeout(() => {
+            this.createCrownShower();
+        }, 500);
+    }
+
+    createFirework() {
+        const colors = ['#FF1493', '#00BFFF', '#FFD700', '#FF6347', '#98FB98', '#DDA0DD'];
+        const firework = document.createElement('div');
+        firework.style.cssText = `
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1000;
+            left: ${Math.random() * window.innerWidth}px;
+            top: ${Math.random() * window.innerHeight * 0.6}px;
+        `;
+        
+        // 花火の爆発エフェクト
+        for (let i = 0; i < 20; i++) {
+            const spark = document.createElement('div');
+            spark.style.cssText = `
+                position: absolute;
+                width: 3px;
+                height: 3px;
+                background: ${colors[Math.floor(Math.random() * colors.length)]};
+                border-radius: 50%;
+                animation: fireworkSpark 1.5s ease-out forwards;
+                transform-origin: center;
+                transform: rotate(${i * 18}deg);
+            `;
+            firework.appendChild(spark);
+        }
+        
+        document.body.appendChild(firework);
+        
+        setTimeout(() => {
+            if (firework.parentNode) {
+                firework.parentNode.removeChild(firework);
+            }
+        }, 1500);
+    }
+
+    createRainbowConfetti() {
+        const colors = ['#FF0000', '#FF7F00', '#FFFF00', '#00FF00', '#0000FF', '#4B0082', '#9400D3'];
+        
+        for (let i = 0; i < 30; i++) {
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                confetti.style.cssText = `
+                    position: fixed;
+                    width: 12px;
+                    height: 12px;
+                    background: ${colors[Math.floor(Math.random() * colors.length)]};
+                    border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
+                    pointer-events: none;
+                    z-index: 999;
+                    left: ${Math.random() * window.innerWidth}px;
+                    top: -20px;
+                    animation: rainbowFall 4s linear forwards;
+                `;
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.parentNode.removeChild(confetti);
+                    }
+                }, 4000);
+            }, i * 100);
+        }
+    }
+
+    createCrownShower() {
+        for (let i = 0; i < 15; i++) {
+            setTimeout(() => {
+                const crown = document.createElement('div');
+                crown.style.cssText = `
+                    position: fixed;
+                    font-size: 2rem;
+                    pointer-events: none;
+                    z-index: 998;
+                    left: ${Math.random() * window.innerWidth}px;
+                    top: -50px;
+                    animation: crownShower 3s ease-out forwards;
+                `;
+                crown.textContent = '👑';
+                document.body.appendChild(crown);
+                
+                setTimeout(() => {
+                    if (crown.parentNode) {
+                        crown.parentNode.removeChild(crown);
+                    }
+                }, 3000);
+            }, i * 200);
+        }
+    }
+
+    createCrownRain() {
+        const crownRain = document.querySelector('.crown-rain');
+        if (!crownRain) return;
+        
+        for (let i = 0; i < 25; i++) {
+            setTimeout(() => {
+                const crown = document.createElement('div');
+                crown.style.cssText = `
+                    position: absolute;
+                    font-size: 1.5rem;
+                    left: ${Math.random() * 100}%;
+                    top: -10%;
+                    animation: crownDrop 5s linear infinite;
+                    animation-delay: ${Math.random() * 2}s;
+                `;
+                crown.textContent = '👑';
+                crownRain.appendChild(crown);
+            }, i * 150);
+        }
+    }
+
+    showMasterTestHint() {
+        const question = this.questions[this.currentQuestionIndex];
+        const hintDisplay = document.getElementById('master-hint-display');
+        const hintText = document.getElementById('master-hint-text');
+        
+        hintText.textContent = question.hint;
+        hintDisplay.classList.remove('hidden');
+    }
+
+    playMasterTestAudio() {
+        const question = this.questions[this.currentQuestionIndex];
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(question.word);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            speechSynthesis.speak(utterance);
+        }
+    }
+
     updateTopScreen() {
         const gameData = gameStorage.loadGameData();
         
@@ -393,6 +685,24 @@ class KanaGame {
         const characterEmoji = gameStorage.getCharacterEmoji(gameData.characterLevel);
         characterElement.textContent = characterEmoji;
         characterElement.className = `character level-${gameData.characterLevel}`;
+        
+        this.updateCrownDisplay();
+    }
+
+    updateCrownDisplay() {
+        const gameData = gameStorage.loadGameData();
+        const crownDisplay = document.getElementById('crown-display');
+        const masterTestCount = gameData.masterTestCount || 0;
+        
+        crownDisplay.innerHTML = '';
+        
+        for (let i = 0; i < masterTestCount; i++) {
+            const crown = document.createElement('span');
+            crown.className = 'crown-item';
+            crown.textContent = '👑';
+            crown.style.setProperty('--delay', `${i * 0.2}s`);
+            crownDisplay.appendChild(crown);
+        }
     }
 
     retry() {

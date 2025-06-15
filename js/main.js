@@ -7,11 +7,19 @@ function initializeApp() {
     console.log('Initializing app...');
     kanaGame.updateTopScreen();
     
-    kanaGame.loadQuestions(1).then(success => {
-        if (!success) {
+    const loadPromises = [
+        kanaGame.loadQuestions(1),
+        kanaGame.loadMasterTestQuestions()
+    ];
+    
+    Promise.all(loadPromises).then(results => {
+        const [questionsLoaded, masterTestLoaded] = results;
+        if (!questionsLoaded) {
             console.error('Failed to load questions during initialization');
-            console.error('Current location:', window.location.href);
-            showErrorMessage('問題データの読み込みに失敗しました。ブラウザの開発者ツールでエラーを確認してください。');
+            showErrorMessage('問題データの読み込みに失敗しました。');
+        } else if (!masterTestLoaded) {
+            console.error('Failed to load master test questions');
+            showErrorMessage('マスターテストデータの読み込みに失敗しました。');
         } else {
             console.log('App initialized successfully');
         }
@@ -50,15 +58,25 @@ function showErrorMessage(message) {
 
 function attachEventListeners() {
     const startButton = document.getElementById('start-button');
+    const masterTestButton = document.getElementById('master-test-button');
     const hintButton = document.getElementById('hint-button');
     const audioButton = document.getElementById('audio-button');
     const retryButton = document.getElementById('retry-button');
     const homeButton = document.getElementById('home-button');
     const rankupOkButton = document.getElementById('rankup-ok');
     const characterElement = document.getElementById('character');
+    
+    // マスターテスト関連
+    const masterHintButton = document.getElementById('master-hint-button');
+    const masterAudioButton = document.getElementById('master-audio-button');
+    const masterCompleteOkButton = document.getElementById('master-complete-ok');
 
     if (startButton) {
         startButton.addEventListener('click', startNewGame);
+    }
+
+    if (masterTestButton) {
+        masterTestButton.addEventListener('click', startMasterTest);
     }
 
     if (hintButton) {
@@ -67,9 +85,21 @@ function attachEventListeners() {
         });
     }
 
+    if (masterHintButton) {
+        masterHintButton.addEventListener('click', () => {
+            kanaGame.showMasterTestHint();
+        });
+    }
+
     if (audioButton) {
         audioButton.addEventListener('click', () => {
             kanaGame.playQuestionAudio();
+        });
+    }
+
+    if (masterAudioButton) {
+        masterAudioButton.addEventListener('click', () => {
+            kanaGame.playMasterTestAudio();
         });
     }
 
@@ -88,6 +118,12 @@ function attachEventListeners() {
     if (rankupOkButton) {
         rankupOkButton.addEventListener('click', () => {
             kanaGame.showResultScreen();
+        });
+    }
+
+    if (masterCompleteOkButton) {
+        masterCompleteOkButton.addEventListener('click', () => {
+            kanaGame.returnToTop();
         });
     }
 
@@ -112,12 +148,26 @@ function startNewGame() {
 
     kanaGame.loadQuestions(level).then(success => {
         if (success) {
+            kanaGame.isMasterTest = false;
             kanaGame.switchScreen('game-screen');
             kanaGame.startGame();
         } else {
             alert('ゲームの開始に失敗しました。');
         }
     });
+}
+
+function startMasterTest() {
+    if (kanaGame.masterTestQuestions.length === 0) {
+        alert('マスターテストデータが読み込まれていません。');
+        return;
+    }
+    
+    const confirmed = confirm('マスターテストを開始しますか？\n30問連続正解が必要で、間違えたら最初からやり直しです。');
+    if (confirmed) {
+        kanaGame.switchScreen('master-test-screen');
+        kanaGame.startMasterTest();
+    }
 }
 
 function playCharacterAnimation() {
