@@ -387,7 +387,7 @@ class KanaGame {
                 allQuestions.push(...data.questions);
             }
             
-            this.masterTestQuestions = this.shuffleArray(allQuestions).slice(0, 30);
+            this.masterTestQuestions = this.shuffleArray(allQuestions).slice(0, 20);
             console.log(`Loaded ${this.masterTestQuestions.length} master test questions`);
             return true;
         } catch (error) {
@@ -403,7 +403,7 @@ class KanaGame {
         this.correctAnswers = 0;
         this.gameResults = [];
         this.isAnswering = false;
-        this.totalQuestions = 30;
+        this.totalQuestions = 20;
         this.displayMasterTestQuestion();
     }
 

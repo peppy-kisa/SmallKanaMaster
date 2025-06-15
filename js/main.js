@@ -59,6 +59,7 @@ function showErrorMessage(message) {
 function attachEventListeners() {
     const startButton = document.getElementById('start-button');
     const masterTestButton = document.getElementById('master-test-button');
+    const resetButton = document.getElementById('reset-button');
     const hintButton = document.getElementById('hint-button');
     const audioButton = document.getElementById('audio-button');
     const retryButton = document.getElementById('retry-button');
@@ -77,6 +78,10 @@ function attachEventListeners() {
 
     if (masterTestButton) {
         masterTestButton.addEventListener('click', startMasterTest);
+    }
+
+    if (resetButton) {
+        resetButton.addEventListener('click', resetGameData);
     }
 
     if (hintButton) {
@@ -168,6 +173,63 @@ function startMasterTest() {
         kanaGame.switchScreen('master-test-screen');
         kanaGame.startMasterTest();
     }
+}
+
+function resetGameData() {
+    const confirmed = confirm('すべての きろくを けしますか？\n・せいかいすう\n・ランク\n・おうかん\n・スタンプ\n\nこの そうさは もとに もどせません。');
+    
+    if (confirmed) {
+        const doubleConfirmed = confirm('ほんとうに きろくを けしますか？\nもう いちど かくにんします。');
+        
+        if (doubleConfirmed) {
+            const success = gameStorage.resetData();
+            
+            if (success) {
+                // 成功時のエフェクト
+                showResetSuccessMessage();
+                
+                // 画面を更新
+                setTimeout(() => {
+                    kanaGame.updateTopScreen();
+                }, 1500);
+            } else {
+                alert('きろくの さくじょに しっぱい しました。');
+            }
+        }
+    }
+}
+
+function showResetSuccessMessage() {
+    const resetMessage = document.createElement('div');
+    resetMessage.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(45deg, #4CAF50, #81C784);
+        color: white;
+        padding: 30px 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        z-index: 1000;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        animation: resetSuccess 1.5s ease forwards;
+    `;
+    resetMessage.innerHTML = `
+        <div style="font-size: 2rem; margin-bottom: 10px;">✅</div>
+        <div>きろくを けしました！</div>
+        <div style="font-size: 1rem; margin-top: 10px;">あたらしく はじめましょう</div>
+    `;
+    
+    document.body.appendChild(resetMessage);
+    
+    setTimeout(() => {
+        if (resetMessage.parentNode) {
+            resetMessage.parentNode.removeChild(resetMessage);
+        }
+    }, 1500);
 }
 
 function playCharacterAnimation() {
