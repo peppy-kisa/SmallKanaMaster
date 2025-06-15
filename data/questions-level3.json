@@ -142,13 +142,13 @@
     },
     {
       "id": 55,
-      "word": "ふじょうけん",
-      "display": "ふ◯ょうけん",
-      "correctAnswer": "じ",
-      "options": ["じゃ", "じゅ", "じょ"],
+      "word": "すいちゅう",
+      "display": "すいち◯う",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
       "type": "youon",
       "level": 3,
-      "hint": "じょうけんが ない"
+      "hint": "みずのなか"
     },
     {
       "id": 56,
