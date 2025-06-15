@@ -168,7 +168,7 @@ function startMasterTest() {
         return;
     }
     
-    const confirmed = confirm('マスターテストを開始しますか？\n30問連続正解が必要で、間違えたら最初からやり直しです。');
+    const confirmed = confirm('マスターテストを開始しますか？\n20問連続正解が必要で、間違えたら最初からやり直しです。');
     if (confirmed) {
         kanaGame.switchScreen('master-test-screen');
         kanaGame.startMasterTest();

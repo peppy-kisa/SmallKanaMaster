@@ -423,7 +423,7 @@ class KanaGame {
         questionWordElement.textContent = question.display;
         currentQuestionElement.textContent = this.currentQuestionIndex + 1;
         
-        const progressPercent = ((this.currentQuestionIndex + 1) / 30) * 100;
+        const progressPercent = ((this.currentQuestionIndex + 1) / 20) * 100;
         progressFill.style.width = `${progressPercent}%`;
 
         hintDisplay.classList.add('hidden');
