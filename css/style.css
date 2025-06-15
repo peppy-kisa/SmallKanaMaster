@@ -364,12 +364,18 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    animation: sparkle 1s ease infinite alternate;
+    animation: perfectGlow 1.5s ease infinite alternate;
 }
 
-@keyframes sparkle {
-    from { transform: scale(1); }
-    to { transform: scale(1.05); }
+@keyframes perfectGlow {
+    from { 
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    }
+    to { 
+        transform: scale(1.05);
+        box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+    }
 }
 
 .bonus-text {
