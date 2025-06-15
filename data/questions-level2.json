@@ -82,21 +82,21 @@
     },
     {
       "id": 29,
-      "word": "ふじゃく",
-      "display": "ふ◯ゃく",
-      "correctAnswer": "じ",
-      "options": ["じ", "し", "ち"],
+      "word": "じゃくてん",
+      "display": "じ◯くてん",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
       "type": "youon",
       "level": 2,
-      "hint": "よわいこと"
+      "hint": "よわいところ"
     },
     {
       "id": 30,
-      "word": "さっか",
-      "display": "さ◯か",
+      "word": "さっかー",
+      "display": "さ◯かー",
       "correctAnswer": "っ",
       "options": ["っ", "つ", "う"],
-      "type": "sokuon",
+      "type": "sokuon", 
       "level": 2,
       "hint": "ボールを けるスポーツ"
     },

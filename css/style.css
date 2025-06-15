@@ -257,23 +257,28 @@ body {
 }
 
 .options-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .option-button {
     background: white;
     border: 3px solid #E0E0E0;
     border-radius: 20px;
-    padding: 25px 20px;
+    padding: 20px 30px;
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .option-button:hover {
@@ -507,13 +512,14 @@ body {
     }
     
     .options-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        max-width: 400px;
+        gap: 12px;
     }
     
     .option-button {
-        padding: 20px 15px;
+        padding: 18px 25px;
         font-size: 1.5rem;
+        min-height: 60px;
     }
     
     .result-actions {
@@ -556,13 +562,14 @@ body {
     }
     
     .options-container {
-        grid-template-columns: 1fr;
-        max-width: 280px;
+        max-width: 320px;
+        gap: 10px;
     }
     
     .option-button {
-        padding: 18px 15px;
+        padding: 16px 20px;
         font-size: 1.3rem;
+        min-height: 55px;
     }
     
     .big-score {
