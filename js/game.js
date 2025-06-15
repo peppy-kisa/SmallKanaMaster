@@ -182,21 +182,21 @@ class KanaGame {
     }
 
     createSparkles() {
-        const sparkleCount = 15;
+        const sparkleCount = 8;
         for (let i = 0; i < sparkleCount; i++) {
             setTimeout(() => {
                 const sparkle = document.createElement('div');
                 sparkle.style.cssText = `
                     position: fixed;
-                    width: 8px;
-                    height: 8px;
+                    width: 6px;
+                    height: 6px;
                     background: #FFD700;
                     border-radius: 50%;
                     pointer-events: none;
                     z-index: 999;
                     left: ${Math.random() * window.innerWidth}px;
                     top: ${Math.random() * window.innerHeight}px;
-                    animation: sparkle 1.5s ease-out forwards;
+                    animation: sparkle 1s ease-out forwards;
                 `;
                 document.body.appendChild(sparkle);
                 
@@ -204,8 +204,43 @@ class KanaGame {
                     if (sparkle.parentNode) {
                         sparkle.parentNode.removeChild(sparkle);
                     }
-                }, 1500);
-            }, i * 100);
+                }, 1000);
+            }, i * 80);
+        }
+    }
+
+    showPerfectEffect() {
+        this.createGentleConfetti();
+        this.createFloatingText('パーフェクト！', '#FFD700', '🌟');
+    }
+
+    createGentleConfetti() {
+        const colors = ['#FFD700', '#FFA500', '#FF69B4', '#87CEEB'];
+        const confettiCount = 12;
+        
+        for (let i = 0; i < confettiCount; i++) {
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                confetti.style.cssText = `
+                    position: fixed;
+                    width: 8px;
+                    height: 8px;
+                    background: ${colors[Math.floor(Math.random() * colors.length)]};
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 999;
+                    left: ${50 + (Math.random() - 0.5) * 60}%;
+                    top: 20%;
+                    animation: gentleFall 3s ease-out forwards;
+                `;
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.parentNode.removeChild(confetti);
+                    }
+                }, 3000);
+            }, i * 150);
         }
     }
 
@@ -260,6 +295,7 @@ class KanaGame {
         
         if (this.correctAnswers === this.totalQuestions) {
             this.playSound('perfect');
+            this.showPerfectEffect();
         }
 
         if (gameData.wasRankUp) {
