@@ -199,6 +199,406 @@
       "type": "sokuon",
       "level": 3,
       "hint": "おもったとおり"
+    },
+    {
+      "id": 61,
+      "word": "こうじょう",
+      "display": "こう◯ょう",
+      "correctAnswer": "じ",
+      "options": ["じ", "し", "ち"],
+      "type": "youon",
+      "level": 3,
+      "hint": "ものを つくる おおきな たてもの"
+    },
+    {
+      "id": 62,
+      "word": "とっきゅう",
+      "display": "と◯きゅう",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "はやい とくべつな でんしゃ"
+    },
+    {
+      "id": 63,
+      "word": "きゅうしゅう",
+      "display": "き◯うしゅう",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "にほんの みなみの しま"
+    },
+    {
+      "id": 64,
+      "word": "げっしょく",
+      "display": "げ◯しょく",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "つきが かくれる しぜんげんしょう"
+    },
+    {
+      "id": 65,
+      "word": "じゅうしょ",
+      "display": "じ◯うしょ",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "すんでいる ばしょ"
+    },
+    {
+      "id": 66,
+      "word": "さっさと",
+      "display": "さ◯さと",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "はやく すること"
+    },
+    {
+      "id": 67,
+      "word": "きょうみ",
+      "display": "き◯うみ",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "おもしろいと おもう きもち"
+    },
+    {
+      "id": 68,
+      "word": "きっかけ",
+      "display": "き◯かけ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "なにかを はじめる りゆう"
+    },
+    {
+      "id": 69,
+      "word": "けんちゅう",
+      "display": "けん◯ゅう",
+      "correctAnswer": "ち",
+      "options": ["ち", "し", "き"],
+      "type": "youon",
+      "level": 3,
+      "hint": "べんきょうして しらべること"
+    },
+    {
+      "id": 70,
+      "word": "こっそり",
+      "display": "こ◯そり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "ひみつに すること"
+    },
+    {
+      "id": 71,
+      "word": "ちょうかん",
+      "display": "ち◯うかん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "りーだーや ぶちょう"
+    },
+    {
+      "id": 72,
+      "word": "すっぽり",
+      "display": "す◯ぽり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "ぴったりと はまること"
+    },
+    {
+      "id": 73,
+      "word": "しゅっちょう",
+      "display": "し◯っちょう",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "しごとで とおくに いくこと"
+    },
+    {
+      "id": 74,
+      "word": "ちゃっかり",
+      "display": "ち◯っかり",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "うまく とくを すること"
+    },
+    {
+      "id": 75,
+      "word": "ひっこし",
+      "display": "ひ◯こし",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "すむところを かえること"
+    },
+    {
+      "id": 76,
+      "word": "りょうりにん",
+      "display": "り◯うりにん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "りょうりを つくる ひと"
+    },
+    {
+      "id": 77,
+      "word": "すっきり",
+      "display": "す◯きり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "きもちよく はっきりした じょうたい"
+    },
+    {
+      "id": 78,
+      "word": "ぎゅうぎゅう",
+      "display": "ぎ◯うぎゅう",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "とても きつく おしつけること"
+    },
+    {
+      "id": 79,
+      "word": "しっぽ",
+      "display": "し◯ぽ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "どうぶつの おしりについているもの"
+    },
+    {
+      "id": 80,
+      "word": "ひょうしょう",
+      "display": "ひ◯うしょう",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "がんばった ひとを ほめること"
+    },
+    {
+      "id": 81,
+      "word": "せいちょう",
+      "display": "せい◯ょう",
+      "correctAnswer": "ち",
+      "options": ["ち", "し", "き"],
+      "type": "youon",
+      "level": 3,
+      "hint": "おおきく そだつこと"
+    },
+    {
+      "id": 82,
+      "word": "ちゃっかり",
+      "display": "ち◯っかり",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "ずるがしこく とくを すること"
+    },
+    {
+      "id": 83,
+      "word": "きっちり",
+      "display": "き◯ちり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "せいかくに ていねいに"
+    },
+    {
+      "id": 84,
+      "word": "けんきゅう",
+      "display": "けん◯ゅう",
+      "correctAnswer": "き",
+      "options": ["き", "し", "ち"],
+      "type": "youon",
+      "level": 3,
+      "hint": "ものごとを ふかく しらべること"
+    },
+    {
+      "id": 85,
+      "word": "てっぺき",
+      "display": "て◯ぺき",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "かんぺきで おそわれない"
+    },
+    {
+      "id": 86,
+      "word": "ちょうせん",
+      "display": "ち◯うせん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "むずかしいことに いどむこと"
+    },
+    {
+      "id": 87,
+      "word": "ぞっとする",
+      "display": "ぞ◯とする",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "こわくて みぶるいする"
+    },
+    {
+      "id": 88,
+      "word": "しゅじゅつ",
+      "display": "し◯じゅつ",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "おいしゃさんが びょうきを なおすこと"
+    },
+    {
+      "id": 89,
+      "word": "ちゃっと",
+      "display": "ち◯っと",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "インターネットで はなすこと"
+    },
+    {
+      "id": 90,
+      "word": "はっそう",
+      "display": "は◯そう",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "ものを おくること"
+    },
+    {
+      "id": 91,
+      "word": "しょうひん",
+      "display": "し◯うひん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "みせで うっているもの"
+    },
+    {
+      "id": 92,
+      "word": "びっくりばこ",
+      "display": "び◯くりばこ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "あけると おどろく おもちゃ"
+    },
+    {
+      "id": 93,
+      "word": "きゅうりょうび",
+      "display": "き◯うりょうび",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "おかねを もらう ひ"
+    },
+    {
+      "id": 94,
+      "word": "ばっさり",
+      "display": "ば◯さり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "おもいきって きること"
+    },
+    {
+      "id": 95,
+      "word": "きょうそう",
+      "display": "き◯うそう",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "だれが はやいか きそうこと"
+    },
+    {
+      "id": 96,
+      "word": "ほっとする",
+      "display": "ほ◯とする",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "あんしんして きもちが らくになる"
+    },
+    {
+      "id": 97,
+      "word": "せんしゅ",
+      "display": "せん◯ゅ",
+      "correctAnswer": "し",
+      "options": ["し", "ち", "き"],
+      "type": "youon",
+      "level": 3,
+      "hint": "スポーツを する ひと"
+    },
+    {
+      "id": 98,
+      "word": "ぺったり",
+      "display": "ぺ◯たり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "ぴったりと はりつくこと"
+    },
+    {
+      "id": 99,
+      "word": "しょうてん",
+      "display": "し◯うてん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "ものを うる ちいさなみせ"
+    },
+    {
+      "id": 100,
+      "word": "ずばっと",
+      "display": "ずば◯と",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "はっきりと ずけずけと"
     }
   ]
 }
