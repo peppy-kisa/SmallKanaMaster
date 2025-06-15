@@ -162,13 +162,13 @@
     },
     {
       "id": 57,
-      "word": "けんちく",
-      "display": "けん◯く",
-      "correctAnswer": "ちく",
-      "options": ["ちゃく", "ちく", "ちょく"],
+      "word": "たいせんしゃ",
+      "display": "たいせんし◯",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
       "type": "youon",
       "level": 3,
-      "hint": "たてものを つくること"
+      "hint": "たたかう　あいて"
     },
     {
       "id": 58,
