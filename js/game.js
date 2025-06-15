@@ -108,8 +108,10 @@ class KanaGame {
         if (isCorrect) {
             this.correctAnswers++;
             this.playSound('correct');
+            this.showCorrectEffect();
         } else {
             this.playSound('incorrect');
+            this.showIncorrectEffect();
         }
 
         this.gameResults.push({
@@ -121,7 +123,7 @@ class KanaGame {
         setTimeout(() => {
             this.currentQuestionIndex++;
             this.displayQuestion();
-        }, 2000);
+        }, 2500);
     }
 
     showHint() {
@@ -140,6 +142,106 @@ class KanaGame {
             utterance.lang = 'ja-JP';
             utterance.rate = 0.8;
             speechSynthesis.speak(utterance);
+        }
+    }
+
+    showCorrectEffect() {
+        this.createFloatingText('せいかい！', '#4CAF50', '🎉');
+        this.createSparkles();
+        this.animateScore('+1');
+    }
+
+    showIncorrectEffect() {
+        this.createFloatingText('ざんねん...', '#F44336', '😅');
+        this.shakeScreen();
+    }
+
+    createFloatingText(text, color, emoji) {
+        const floatingText = document.createElement('div');
+        floatingText.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: ${color};
+            z-index: 1000;
+            pointer-events: none;
+            text-align: center;
+            animation: floatUp 2s ease-out forwards;
+        `;
+        floatingText.innerHTML = `${emoji}<br>${text}`;
+        document.body.appendChild(floatingText);
+
+        setTimeout(() => {
+            if (floatingText.parentNode) {
+                floatingText.parentNode.removeChild(floatingText);
+            }
+        }, 2000);
+    }
+
+    createSparkles() {
+        const sparkleCount = 15;
+        for (let i = 0; i < sparkleCount; i++) {
+            setTimeout(() => {
+                const sparkle = document.createElement('div');
+                sparkle.style.cssText = `
+                    position: fixed;
+                    width: 8px;
+                    height: 8px;
+                    background: #FFD700;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 999;
+                    left: ${Math.random() * window.innerWidth}px;
+                    top: ${Math.random() * window.innerHeight}px;
+                    animation: sparkle 1.5s ease-out forwards;
+                `;
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    if (sparkle.parentNode) {
+                        sparkle.parentNode.removeChild(sparkle);
+                    }
+                }, 1500);
+            }, i * 100);
+        }
+    }
+
+    animateScore(scoreText) {
+        const gameScreen = document.getElementById('game-screen');
+        if (!gameScreen) return;
+
+        const scoreAnimation = document.createElement('div');
+        scoreAnimation.style.cssText = `
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4CAF50;
+            z-index: 1000;
+            pointer-events: none;
+            animation: scoreFloat 2s ease-out forwards;
+        `;
+        scoreAnimation.textContent = scoreText;
+        gameScreen.appendChild(scoreAnimation);
+
+        setTimeout(() => {
+            if (scoreAnimation.parentNode) {
+                scoreAnimation.parentNode.removeChild(scoreAnimation);
+            }
+        }, 2000);
+    }
+
+    shakeScreen() {
+        const gameScreen = document.getElementById('game-screen');
+        if (gameScreen) {
+            gameScreen.style.animation = 'shake 0.5s ease-in-out';
+            setTimeout(() => {
+                gameScreen.style.animation = '';
+            }, 500);
         }
     }
 
