@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "word": "きょうしつ",
+      "display": "き◯うしつ",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "べんきょうする ばしょ"
+    },
+    {
+      "id": 2,
+      "word": "がっこう",
+      "display": "が◯こう",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "まいにち いく ところ"
+    },
+    {
+      "id": 3,
+      "word": "しゃしん",
+      "display": "し◯しん",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "カメラで とるもの"
+    },
+    {
+      "id": 4,
+      "word": "きっぷ",
+      "display": "き◯ぷ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "でんしゃに のるとき いるもの"
+    },
+    {
+      "id": 5,
+      "word": "じゅうす",
+      "display": "じ◯うす",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "あまい のみもの"
+    },
+    {
+      "id": 6,
+      "word": "せっけん",
+      "display": "せ◯けん",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "てを あらうときに つかうもの"
+    },
+    {
+      "id": 7,
+      "word": "びょういん",
+      "display": "び◯ういん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "びょうきの ひとが いく ところ"
+    },
+    {
+      "id": 8,
+      "word": "こっぷ",
+      "display": "こ◯ぷ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "みずを のむときに つかうもの"
+    },
+    {
+      "id": 9,
+      "word": "ちゃわん",
+      "display": "ち◯わん",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "ごはんを たべるときに つかうもの"
+    },
+    {
+      "id": 10,
+      "word": "にっき",
+      "display": "に◯き",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "まいにちの できごとを かくもの"
+    },
+    {
+      "id": 11,
+      "word": "りょうり",
+      "display": "り◯うり",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "たべもの つくること"
+    },
+    {
+      "id": 12,
+      "word": "ざっし",
+      "display": "ざ◯し",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "えや もじが かいてある ほん"
+    },
+    {
+      "id": 13,
+      "word": "しゅみ",
+      "display": "し◯み",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "すきで やっていること"
+    },
+    {
+      "id": 14,
+      "word": "きって",
+      "display": "き◯て",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "てがみに はるもの"
+    },
+    {
+      "id": 15,
+      "word": "ひゃく",
+      "display": "ひ◯く",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "100の よみかた"
+    },
+    {
+      "id": 16,
+      "word": "らっぱ",
+      "display": "ら◯ぱ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "おとが でる がっき"
+    },
+    {
+      "id": 17,
+      "word": "ぎゅうにゅう",
+      "display": "ぎ◯うにゅう",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "うしから とれる しろい のみもの"
+    },
+    {
+      "id": 18,
+      "word": "けっこん",
+      "display": "け◯こん",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "すきな ひとと いっしょに なること"
+    },
+    {
+      "id": 19,
+      "word": "びょうき",
+      "display": "び◯うき",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 1,
+      "hint": "からだの ちょうしが わるいこと"
+    },
+    {
+      "id": 20,
+      "word": "はっぱ",
+      "display": "は◯ぱ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 1,
+      "hint": "きに ついている みどりのもの"
+    }
+  ]
+}

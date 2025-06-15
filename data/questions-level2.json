@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "id": 21,
+      "word": "きょうかしょ",
+      "display": "き◯うかしょ",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 2,
+      "hint": "がっこうで べんきょうに つかうほん"
+    },
+    {
+      "id": 22,
+      "word": "あっぷる",
+      "display": "あ◯ぷる",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "あかい くだもの"
+    },
+    {
+      "id": 23,
+      "word": "びじゅつ",
+      "display": "び◯ゅつ",
+      "correctAnswer": "じ",
+      "options": ["じ", "し", "ち"],
+      "type": "youon",
+      "level": 2,
+      "hint": "えを かいたり つくったりすること"
+    },
+    {
+      "id": 24,
+      "word": "たっきゅう",
+      "display": "た◯きゅう",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "ちいさい たまで やるスポーツ"
+    },
+    {
+      "id": 25,
+      "word": "ひゃっかてん",
+      "display": "ひ◯っかてん",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 2,
+      "hint": "いろいろなものが うってある おおきなみせ"
+    },
+    {
+      "id": 26,
+      "word": "ばった",
+      "display": "ば◯た",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "ぴょんぴょん とぶ みどりの むし"
+    },
+    {
+      "id": 27,
+      "word": "ちゅうい",
+      "display": "ち◯うい",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 2,
+      "hint": "きをつけること"
+    },
+    {
+      "id": 28,
+      "word": "こっき",
+      "display": "こ◯き",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "くにの しるしの はた"
+    },
+    {
+      "id": 29,
+      "word": "ふじゃく",
+      "display": "ふ◯ゃく",
+      "correctAnswer": "じ",
+      "options": ["じ", "し", "ち"],
+      "type": "youon",
+      "level": 2,
+      "hint": "よわいこと"
+    },
+    {
+      "id": 30,
+      "word": "さっか",
+      "display": "さ◯か",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "ボールを けるスポーツ"
+    },
+    {
+      "id": 31,
+      "word": "みゅーじっく",
+      "display": "み◯ーじっく",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 2,
+      "hint": "うたや がっきの おと"
+    },
+    {
+      "id": 32,
+      "word": "べっと",
+      "display": "べ◯と",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "ねるための だい"
+    },
+    {
+      "id": 33,
+      "word": "ぎょうじ",
+      "display": "ぎ◯うじ",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 2,
+      "hint": "がっこうの おまつりや きねんび"
+    },
+    {
+      "id": 34,
+      "word": "きっちん",
+      "display": "き◯ちん",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "りょうりを つくる ばしょ"
+    },
+    {
+      "id": 35,
+      "word": "ちゅうしゃ",
+      "display": "ち◯うしゃ",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 2,
+      "hint": "おいしゃさんが つかう はり"
+    },
+    {
+      "id": 36,
+      "word": "ろっかー",
+      "display": "ろ◯かー",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "ものを しまう はこ"
+    },
+    {
+      "id": 37,
+      "word": "かぞく",
+      "display": "か◯く",
+      "correctAnswer": "ぞ",
+      "options": ["ぞ", "そ", "と"],
+      "type": "youon",
+      "level": 2,
+      "hint": "おとうさん、おかあさん、こども"
+    },
+    {
+      "id": 38,
+      "word": "ねっと",
+      "display": "ね◯と",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "インターネット"
+    },
+    {
+      "id": 39,
+      "word": "ひょうげん",
+      "display": "ひ◯うげん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 2,
+      "hint": "きもちや かんがえを あらわすこと"
+    },
+    {
+      "id": 40,
+      "word": "つっこみ",
+      "display": "つ◯こみ",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 2,
+      "hint": "おもしろいことを いうこと"
+    }
+  ]
+}

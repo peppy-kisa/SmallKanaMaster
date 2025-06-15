@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ようおん・そくおん マスター</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- トップ画面 -->
+        <div id="top-screen" class="screen active">
+            <header class="app-header">
+                <h1 class="app-title">ようおん・そくおん<br>マスター</h1>
+            </header>
+            
+            <main class="top-main">
+                <div class="character-area">
+                    <div id="character" class="character level-1">🥚</div>
+                </div>
+                
+                <div class="stats-area">
+                    <div class="rank-info">
+                        <div class="current-rank">
+                            <span class="rank-label">げんざいの ランク</span>
+                            <span id="current-rank" class="rank-value">ビギナー 🌱</span>
+                        </div>
+                        <div class="progress-info">
+                            <span class="progress-label">つぎの ランクまで</span>
+                            <span id="progress-to-next" class="progress-value">あと 11もん</span>
+                        </div>
+                    </div>
+                    
+                    <div class="total-score">
+                        <span class="score-label">ごうけい せいかいすう</span>
+                        <span id="total-correct" class="score-value">0もん</span>
+                    </div>
+                </div>
+                
+                <button id="start-button" class="start-button">スタート</button>
+            </main>
+        </div>
+
+        <!-- 問題画面 -->
+        <div id="game-screen" class="screen">
+            <header class="game-header">
+                <div class="question-counter">
+                    <span id="current-question">1</span> / <span id="total-questions">5</span>
+                </div>
+                <div class="question-progress">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </header>
+            
+            <main class="game-main">
+                <div class="question-area">
+                    <div id="question-word" class="question-word">き◯うしつ</div>
+                    <div class="question-actions">
+                        <button id="hint-button" class="action-button">ヒント</button>
+                        <button id="audio-button" class="action-button">🔊</button>
+                    </div>
+                </div>
+                
+                <div id="hint-display" class="hint-display hidden">
+                    <p id="hint-text">べんきょうする ばしょ</p>
+                </div>
+                
+                <div class="options-area">
+                    <div id="options-container" class="options-container">
+                        <!-- 選択肢ボタンが動的に生成される -->
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- 結果画面 -->
+        <div id="result-screen" class="screen">
+            <header class="result-header">
+                <h2 class="result-title">けっか はっぴょう！</h2>
+            </header>
+            
+            <main class="result-main">
+                <div class="score-display">
+                    <div class="big-score">
+                        <span id="correct-count">5</span> / <span id="total-count">5</span>もん せいかい！
+                    </div>
+                    <div id="perfect-bonus" class="perfect-bonus hidden">
+                        <span class="bonus-text">パーフェクト ボーナス！</span>
+                        <span class="bonus-stamp">⭐</span>
+                    </div>
+                </div>
+                
+                <div class="question-results">
+                    <div id="results-list" class="results-list">
+                        <!-- 問題結果が動的に生成される -->
+                    </div>
+                </div>
+                
+                <div class="result-actions">
+                    <button id="retry-button" class="action-button primary">もう いちど</button>
+                    <button id="home-button" class="action-button secondary">トップへ</button>
+                </div>
+            </main>
+        </div>
+
+        <!-- ランクアップ画面 -->
+        <div id="rankup-screen" class="screen">
+            <div class="rankup-content">
+                <div class="celebration">🎉</div>
+                <h2 class="rankup-title">ランクアップ！</h2>
+                <div class="new-rank">
+                    <span id="new-rank-name">ブロンズ</span>
+                    <span id="new-rank-badge">🥉</span>
+                </div>
+                <button id="rankup-ok" class="action-button primary">やったー！</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 効果音用オーディオ要素 -->
+    <audio id="correct-sound" preload="none">
+        <source src="assets/sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="incorrect-sound" preload="none">
+        <source src="assets/sounds/incorrect.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="perfect-sound" preload="none">
+        <source src="assets/sounds/perfect.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="rankup-sound" preload="none">
+        <source src="assets/sounds/rankup.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/storage.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

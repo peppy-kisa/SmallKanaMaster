@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "id": 41,
+      "word": "きょうりょく",
+      "display": "き◯うりょく",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "みんなで いっしょに がんばること"
+    },
+    {
+      "id": 42,
+      "word": "ずっと",
+      "display": "ず◯と",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "ながい あいだ"
+    },
+    {
+      "id": 43,
+      "word": "ぎじゅつ",
+      "display": "ぎ◯つ",
+      "correctAnswer": "じゅ",
+      "options": ["じゃ", "じゅ", "じょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "ものを つくるための ちから"
+    },
+    {
+      "id": 44,
+      "word": "けっていてき",
+      "display": "け◯ていてき",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "とても だいじな"
+    },
+    {
+      "id": 45,
+      "word": "ひゃくねん",
+      "display": "ひ◯くねん",
+      "correctAnswer": "ゃ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "100ねん"
+    },
+    {
+      "id": 46,
+      "word": "しゅっぱつ",
+      "display": "し◯っぱつ",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "りょこうを はじめること"
+    },
+    {
+      "id": 47,
+      "word": "びじゅつかん",
+      "display": "び◯つかん",
+      "correctAnswer": "じゅ",
+      "options": ["じゃ", "じゅ", "じょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "えや ちょうこくが かざってある たてもの"
+    },
+    {
+      "id": 48,
+      "word": "きっぱり",
+      "display": "き◯ぱり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "はっきりと"
+    },
+    {
+      "id": 49,
+      "word": "きゅうきゅうしゃ",
+      "display": "き◯うきゅうしゃ",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "びょうきの ひとを はこぶ くるま"
+    },
+    {
+      "id": 50,
+      "word": "せっきゃく",
+      "display": "せ◯きゃく",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "おきゃくさんを もてなすこと"
+    },
+    {
+      "id": 51,
+      "word": "りょうしん",
+      "display": "り◯うしん",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "おとうさんと おかあさん"
+    },
+    {
+      "id": 52,
+      "word": "らっきー",
+      "display": "ら◯きー",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "うんが いいこと"
+    },
+    {
+      "id": 53,
+      "word": "しゅくだい",
+      "display": "し◯くだい",
+      "correctAnswer": "ゅ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "いえで やる べんきょう"
+    },
+    {
+      "id": 54,
+      "word": "ばっちり",
+      "display": "ば◯ちり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "かんぺきに"
+    },
+    {
+      "id": 55,
+      "word": "ふじょうけん",
+      "display": "ふ◯ょうけん",
+      "correctAnswer": "じ",
+      "options": ["じゃ", "じゅ", "じょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "じょうけんが ない"
+    },
+    {
+      "id": 56,
+      "word": "おっと",
+      "display": "お◯と",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "けっこんした おとこのひと"
+    },
+    {
+      "id": 57,
+      "word": "けんちく",
+      "display": "けん◯く",
+      "correctAnswer": "ちく",
+      "options": ["ちゃく", "ちく", "ちょく"],
+      "type": "youon",
+      "level": 3,
+      "hint": "たてものを つくること"
+    },
+    {
+      "id": 58,
+      "word": "ひっし",
+      "display": "ひ◯し",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "いのちがけで がんばること"
+    },
+    {
+      "id": 59,
+      "word": "しょうらい",
+      "display": "し◯うらい",
+      "correctAnswer": "ょ",
+      "options": ["ゃ", "ゅ", "ょ"],
+      "type": "youon",
+      "level": 3,
+      "hint": "みらいの こと"
+    },
+    {
+      "id": 60,
+      "word": "やっぱり",
+      "display": "や◯ぱり",
+      "correctAnswer": "っ",
+      "options": ["っ", "つ", "う"],
+      "type": "sokuon",
+      "level": 3,
+      "hint": "おもったとおり"
+    }
+  ]
+}
